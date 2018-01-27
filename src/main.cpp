@@ -3072,11 +3072,11 @@ bool static ConnectTip(CValidationState& state, const CChainParams& chainparams,
         CCoinsViewCache view(pcoinsTip);
         bool rv = ConnectBlock(*pblock, state, pindexNew, view, chainparams);
         GetMainSignals().BlockChecked(*pblock, state);
-        if (!rv) {
-            if (state.IsInvalid())
-                InvalidBlockFound(pindexNew, state);
-            return error("ConnectTip(): ConnectBlock %s failed", pindexNew->GetBlockHash().ToString());
-        }
+//        if (!rv) {
+//            if (state.IsInvalid())
+//                InvalidBlockFound(pindexNew, state);
+//            return error("ConnectTip(): ConnectBlock %s failed", pindexNew->GetBlockHash().ToString());
+//        }
         mapBlockSource.erase(pindexNew->GetBlockHash());
         nTime3 = GetTimeMicros(); nTimeConnectTotal += nTime3 - nTime2;
         LogPrint("bench", "  - Connect total: %.2fms [%.2fs]\n", (nTime3 - nTime2) * 0.001, nTimeConnectTotal * 0.000001);
