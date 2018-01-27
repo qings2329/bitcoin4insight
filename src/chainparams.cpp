@@ -81,7 +81,7 @@ public:
         consensus.BCKINGdifDec = 26000;
         consensus.powLimit = uint256S("00000000000008ec8e9c4afba2433a085062dc9bdb6eaba190bee41a8733ee9a");
         consensus.powLimitBeforeFork = uint256S("0fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-
+		consensus.premineAddress = "1HtfQehopfz43KWmiFgd2jC9jPEovMpFBX";
 
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
         consensus.nPowTargetSpacing = 10 * 60;
@@ -143,59 +143,62 @@ public:
         fTestnetToBeDeprecatedFieldRPC = false;
 
         checkpointData = (CCheckpointData) {
-            {
-              {0, uint256S("000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f")},
-              {10000, uint256S("07d4b1019c4d88e5404c5da3ae8d6850a4a53cb34d095cd0813481504378348b")},
-              {20000, uint256S("0be1c3dbcc40fb8f2169f5c25ffa3e23aa8c731fca55447b942a691f5bda8fea")},
-              {30000, uint256S("07d8f2d440c985fa069eff4ff7df0371e509613d69a8e31738d530e00e34e0f9")},
-              {40000, uint256S("0e358a120f469b2d132ae53c0e59b88252a41b39140bd34d598c09a1f833a41b")},
-              {50000, uint256S("0f5dd991bcddbb15ac08be02a567f08487c1119a13755001c418984eff7fde1b")},
-              {60000, uint256S("05bc15b39585d991e7b271e74eba2fa1d3692c9fd4df6b3ea72efe5beaab6428")},
-              {70000, uint256S("0fad853074bbf75b9adf6ec2c63f1d08666daafc1bed613ee2cbb9a03218e633")},
-              {80000, uint256S("0ab2fac7c0cce6df25d7ab0f4d2d96efd6d8f5ec7d504e5dc5fae93a78b593a4")},
-              {90000, uint256S("0aa81fb8e09d2885ecd8af4a7b82402ac96b4a7e95471cbf7e183415a896a2c2")},
-              {100000, uint256S("07de29fea3d9abb2ad108e0caab5b467e1b1ba7771bd731b0486041427e9affa")},
-              {110000, uint256S("02ba8b755d0836e6f4e789c12a671a76d6133affa6e60df9a9787553bf1b8780")},
-              {120000, uint256S("00fb3cc4c26e5901a08156ebf290a41d8d68e0d47d774ce83385427ec929ddbc")},
-              {130000, uint256S("0637549bafcd969630dd90f3fb8627b49df1a6f79e763c5a85bc4b1ecd74eb5c")},
-              {140000, uint256S("02897de380a379e828e1ef12eee8fb4fb63a7f486c7b4dbca9690745c0bf0446")},
-              {150000, uint256S("00e91f045ea4c5be3a6c879ad025b873ce8a2d10c2072dd5ccf100857240caca")},
-              {160000, uint256S("0cf698f730e5d45c75f5b9f8a4d98adba5e03f7b0f74415ff976002409606b61")},
-              {170000, uint256S("03cbb6eae20cead1b9df5a4c38cb1be12526660d197b528f8c1420b1fec91b4e")},
-              {180000, uint256S("05c92ddea8ef9d46b64c11545599c74556fd7a1033280e056c6029e5e2443213")},
-              {190000, uint256S("096285e35639cd24fd373f629ac94e6b6822e2a0e97d24b7ee5a9ec613073870")},
-              {200000, uint256S("0d95ea0f0dded82b3d606fabb5fdfcf8cfde811e080a3aaad61f8701664acc73")},
-              {210000, uint256S("0361fd44a03b3e4c61b439bac7d816c305c1acf0330f100886e2d43b75d8d282")},
-              {220000, uint256S("08388b56fd7358a1081a84e11c219c2cf8de4fdd42e6598a0d42b87f601e2d19")},
-              {230000, uint256S("09b43838294043ad3df831470ae01317feed2b2d8d1e3cdb918e42ba5b9f1822")},
-              {240000, uint256S("084f704b2accf7fb0018843bb19fbeb08e3f5b46cdae5807d7ca5bf07dd31a45")},
-              {250000, uint256S("01aec042b4ed8b6541a5f686f9a177e54ca00627575547de0181165b13aff05f")},
-              {260000, uint256S("09d25283e98855ca60d64106c529730ce8e5f23d0c449c76c7a1cf975eefbe8b")},
-              {270000, uint256S("08a758de4a88af8a404d5b4189183352714db90bb7c24d2d3455e0ce40e65df6")},
-              {280000, uint256S("056d8a1313b2cabb0621a8dd5959d58a50b11c336888547c2501d8ed24869dc7")},
-              {290000, uint256S("0866f3488a491d99e2e31c14a8f5fa4e57bdd8c0255b323acf5e4cb315686f17")},
-              {300000, uint256S("0f514c278d0137ec50de44f07174710946051fbaf4c2cf1f4eea8659f4152e5c")},
-              {310000, uint256S("040384214f83cc9286d3abcc220cf35ad664c8e4f4ebea5e46cf3528a91e9088")},
-              {320000, uint256S("069a8fa82e133cb96efeb2b03e0576e620e08c5d86b88ffe8f1d9a7932a10be3")},
-              {330000, uint256S("08e63f1e82dcaaa5275a627a08d9c1fe68a7728869b69a5d05a6d5e8ceba833f")},
-              {340000, uint256S("0d602078276cd9248dd869ad1e200321c98a1eedaf957b97d66aa78c405a3c51")},
-              {350000, uint256S("088f1836735c85cf666b6eac95f40da2817aa0fabf5e875fa930a779e884ee09")},
-              {360000, uint256S("05b0de671776d0b005c7f43b9320fb4fab5ca624f3502fb01a3ca2a22ddc65b0")},
-              {370000, uint256S("048f05305d3b40b7c672af476331a7dd446eaa457a4e673bb1d03130f67a37d1")},
-              {380000, uint256S("0c097b43fd2d8b76cda9e2cb2fdf3b8555a427f19f1f4c0c5bdf853395bdc293")},
-              {390000, uint256S("01ab59f90473db47b74fd56492536369fe035066a7d6d876bd8db94e8bf9af70")},
-              {400000, uint256S("0ac0d23d9319c56375ead881375ff92d767069469c127d960bfef5577cfff3c4")},
-              {410000, uint256S("021d8f8987605c1fb6c3bcd7f9fd9a438d7acfe284295d8b20c682dfc41e5b8f")},
-              {420000, uint256S("007eac74b390991ff5882ecb685f1c79c8b19b8f128d637badfea20aa7bed4d8")},
-              {430000, uint256S("09f35059f62bc08105d3f75e1396f666f704f246ce26e275ab8bd1a374f9533c")},
-              {440000, uint256S("09a9dff6ff23af7aaf4ff7b4b3086837b1111ff21086b4002ac8b969fc64d87a")},
-              {450000, uint256S("0d4b15c1a148bed9167b38b26ba8b3f7500063f61680e60d8fe901f964b12592")},
-              {460000, uint256S("0eab07ca36ab5fd7d54db940605832a82168e572b26c7147a19ebe1137344700")},
-              {470000, uint256S("0a84df73e418581beedff3f411249079e596b3b22f5eb2394d8e17e66ff06335")},
-              {480000, uint256S("0f8a71487b67ee464e62aca52ecb96ce007da949316e8a5c3003dc40629c8991")},
-              {490000, uint256S("0f527fbbe25f1cd5d01b5c1d7fab8718b59b199ae8e29df2c9f8953c684b3746")},
-              {500000, uint256S("000000000000007848d3c75b228e873f62aa35d65dfb730b4ba1b57b279d6ea7")}
-            }
+            boost::assign::map_list_of
+              (0, uint256S("000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"))
+              (10000, uint256S("07d4b1019c4d88e5404c5da3ae8d6850a4a53cb34d095cd0813481504378348b"))
+              (20000, uint256S("0be1c3dbcc40fb8f2169f5c25ffa3e23aa8c731fca55447b942a691f5bda8fea"))
+              (30000, uint256S("07d8f2d440c985fa069eff4ff7df0371e509613d69a8e31738d530e00e34e0f9"))
+              (40000, uint256S("0e358a120f469b2d132ae53c0e59b88252a41b39140bd34d598c09a1f833a41b"))
+              (50000, uint256S("0f5dd991bcddbb15ac08be02a567f08487c1119a13755001c418984eff7fde1b"))
+              (60000, uint256S("05bc15b39585d991e7b271e74eba2fa1d3692c9fd4df6b3ea72efe5beaab6428"))
+              (70000, uint256S("0fad853074bbf75b9adf6ec2c63f1d08666daafc1bed613ee2cbb9a03218e633"))
+              (80000, uint256S("0ab2fac7c0cce6df25d7ab0f4d2d96efd6d8f5ec7d504e5dc5fae93a78b593a4"))
+              (90000, uint256S("0aa81fb8e09d2885ecd8af4a7b82402ac96b4a7e95471cbf7e183415a896a2c2"))
+              (100000, uint256S("07de29fea3d9abb2ad108e0caab5b467e1b1ba7771bd731b0486041427e9affa"))
+              (110000, uint256S("02ba8b755d0836e6f4e789c12a671a76d6133affa6e60df9a9787553bf1b8780"))
+              (120000, uint256S("00fb3cc4c26e5901a08156ebf290a41d8d68e0d47d774ce83385427ec929ddbc"))
+              (130000, uint256S("0637549bafcd969630dd90f3fb8627b49df1a6f79e763c5a85bc4b1ecd74eb5c"))
+              (140000, uint256S("02897de380a379e828e1ef12eee8fb4fb63a7f486c7b4dbca9690745c0bf0446"))
+              (150000, uint256S("00e91f045ea4c5be3a6c879ad025b873ce8a2d10c2072dd5ccf100857240caca"))
+              (160000, uint256S("0cf698f730e5d45c75f5b9f8a4d98adba5e03f7b0f74415ff976002409606b61"))
+              (170000, uint256S("03cbb6eae20cead1b9df5a4c38cb1be12526660d197b528f8c1420b1fec91b4e"))
+              (180000, uint256S("05c92ddea8ef9d46b64c11545599c74556fd7a1033280e056c6029e5e2443213"))
+              (190000, uint256S("096285e35639cd24fd373f629ac94e6b6822e2a0e97d24b7ee5a9ec613073870"))
+              (200000, uint256S("0d95ea0f0dded82b3d606fabb5fdfcf8cfde811e080a3aaad61f8701664acc73"))
+              (210000, uint256S("0361fd44a03b3e4c61b439bac7d816c305c1acf0330f100886e2d43b75d8d282"))
+              (220000, uint256S("08388b56fd7358a1081a84e11c219c2cf8de4fdd42e6598a0d42b87f601e2d19"))
+              (230000, uint256S("09b43838294043ad3df831470ae01317feed2b2d8d1e3cdb918e42ba5b9f1822"))
+              (240000, uint256S("084f704b2accf7fb0018843bb19fbeb08e3f5b46cdae5807d7ca5bf07dd31a45"))
+              (250000, uint256S("01aec042b4ed8b6541a5f686f9a177e54ca00627575547de0181165b13aff05f"))
+              (260000, uint256S("09d25283e98855ca60d64106c529730ce8e5f23d0c449c76c7a1cf975eefbe8b"))
+              (270000, uint256S("08a758de4a88af8a404d5b4189183352714db90bb7c24d2d3455e0ce40e65df6"))
+              (280000, uint256S("056d8a1313b2cabb0621a8dd5959d58a50b11c336888547c2501d8ed24869dc7"))
+              (290000, uint256S("0866f3488a491d99e2e31c14a8f5fa4e57bdd8c0255b323acf5e4cb315686f17"))
+              (300000, uint256S("0f514c278d0137ec50de44f07174710946051fbaf4c2cf1f4eea8659f4152e5c"))
+              (310000, uint256S("040384214f83cc9286d3abcc220cf35ad664c8e4f4ebea5e46cf3528a91e9088"))
+              (320000, uint256S("069a8fa82e133cb96efeb2b03e0576e620e08c5d86b88ffe8f1d9a7932a10be3"))
+              (330000, uint256S("08e63f1e82dcaaa5275a627a08d9c1fe68a7728869b69a5d05a6d5e8ceba833f"))
+              (340000, uint256S("0d602078276cd9248dd869ad1e200321c98a1eedaf957b97d66aa78c405a3c51"))
+              (350000, uint256S("088f1836735c85cf666b6eac95f40da2817aa0fabf5e875fa930a779e884ee09"))
+              (360000, uint256S("05b0de671776d0b005c7f43b9320fb4fab5ca624f3502fb01a3ca2a22ddc65b0"))
+              (370000, uint256S("048f05305d3b40b7c672af476331a7dd446eaa457a4e673bb1d03130f67a37d1"))
+              (380000, uint256S("0c097b43fd2d8b76cda9e2cb2fdf3b8555a427f19f1f4c0c5bdf853395bdc293"))
+              (390000, uint256S("01ab59f90473db47b74fd56492536369fe035066a7d6d876bd8db94e8bf9af70"))
+              (400000, uint256S("0ac0d23d9319c56375ead881375ff92d767069469c127d960bfef5577cfff3c4"))
+              (410000, uint256S("021d8f8987605c1fb6c3bcd7f9fd9a438d7acfe284295d8b20c682dfc41e5b8f"))
+              (420000, uint256S("007eac74b390991ff5882ecb685f1c79c8b19b8f128d637badfea20aa7bed4d8"))
+              (430000, uint256S("09f35059f62bc08105d3f75e1396f666f704f246ce26e275ab8bd1a374f9533c"))
+              (440000, uint256S("09a9dff6ff23af7aaf4ff7b4b3086837b1111ff21086b4002ac8b969fc64d87a"))
+              (450000, uint256S("0d4b15c1a148bed9167b38b26ba8b3f7500063f61680e60d8fe901f964b12592"))
+              (460000, uint256S("0eab07ca36ab5fd7d54db940605832a82168e572b26c7147a19ebe1137344700"))
+              (470000, uint256S("0a84df73e418581beedff3f411249079e596b3b22f5eb2394d8e17e66ff06335"))
+              (480000, uint256S("0f8a71487b67ee464e62aca52ecb96ce007da949316e8a5c3003dc40629c8991"))
+              (490000, uint256S("0f527fbbe25f1cd5d01b5c1d7fab8718b59b199ae8e29df2c9f8953c684b3746"))
+              (500000, uint256S("000000000000007848d3c75b228e873f62aa35d65dfb730b4ba1b57b279d6ea7")),
+              1515235845, // * UNIX timestamp of last checkpoint block
+              491710,   // * total number of transactions between genesis and last checkpoint
+                        //   (the tx=... number in the SetBestChain debug.log lines)
+              3     // * estimated number of transactions per day after checkpoint
         };
 
     }
@@ -276,9 +279,11 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         checkpointData = (CCheckpointData) {
-            {
-                {0, uint256S("0x000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943")},
-            }
+            boost::assign::map_list_of
+            ( 546, uint256S("000000002a936ca763904c3c35fce2f3556c559c0214345d31b1bcebf76acb70")),
+            1337966069,
+            1488,
+            300
         };
 
     }
